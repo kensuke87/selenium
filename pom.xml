@@ -13,6 +13,8 @@
     
     <!-- Maven Properties -->
     <maven-compiler.version>3.6.1</maven-compiler.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven-surefire.version>2.20</maven-surefire.version>
     
     <!-- JUnit Properties -->
@@ -20,7 +22,7 @@
     
     <!-- Selenium Properties -->
     <selenium-java.version>3.4.0</selenium-java.version>
-    <selenium.baseUrl>http://localhost:8080/</selenium.baseUrl>
+    <selenium.baseUrl>http://54.168.58.42:8080/</selenium.baseUrl>
   </properties>
   
   <dependencies>
