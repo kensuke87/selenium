@@ -41,7 +41,6 @@
   </dependencies>
   
   <build>
-    -- mvn test
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugin</groupId>
