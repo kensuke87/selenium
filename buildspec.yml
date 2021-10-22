@@ -18,12 +18,13 @@ phases:
     files:
       - target/sampleproject.war
       - target/surefire-reports/*
-   reports:
-    junit:
-      files:
-        - '**/*'
-      base-directory: "target/surefire-reports"
-      file-format: 'JUnitXML'
-    cache:
-      paths:
-        - '/root/.m2/**/*'
+    discard-paths: yes
+  reports:
+   junit:
+     files:
+       - '**/*'
+     base-directory: "target/surefire-reports"
+     file-format: 'JUnitXML'
+   cache:
+     paths:
+       - '/root/.m2/**/*'
