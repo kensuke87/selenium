@@ -18,7 +18,6 @@ phases:
     files:
       - target/sampleproject.war
       - target/surefire-reports/*
-    discard-paths: yes
    reports:
     junit:
       files:
