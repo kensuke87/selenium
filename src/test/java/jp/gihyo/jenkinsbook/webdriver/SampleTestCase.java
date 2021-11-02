@@ -29,7 +29,6 @@ public class SampleTestCase {
 	    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		ChromeOptions options = new ChromeOptions();
-		//options.setHeadless(true);
 		options.addArguments("headless");
 		options.addArguments("--no-sandbox");
 		driver = new ChromeDriver(options);
