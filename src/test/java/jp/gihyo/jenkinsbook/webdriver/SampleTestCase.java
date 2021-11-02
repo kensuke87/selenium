@@ -25,8 +25,8 @@ public class SampleTestCase {
 
 	@BeforeClass
 	public static void setUpClass() throws IOException {
-		prop.load(new FileInputStream("target\\test-classes\\selenium.properties"));
-	    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		prop.load(new FileInputStream("target/test-classes/selenium.properties"));
+	    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		ChromeOptions options = new ChromeOptions();
 		//options.setHeadless(true);
