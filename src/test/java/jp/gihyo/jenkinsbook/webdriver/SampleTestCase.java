@@ -28,12 +28,12 @@ public class SampleTestCase {
 	public static void setUpClass() throws IOException {
 		prop.load(new FileInputStream("target/test-classes/selenium.properties"));
     		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-    		//System.setProperty("webdriver.chrome.whitelistedIps", "");
+    		System.setProperty("webdriver.chrome.whitelistedIps", "");
     		//WebDriver driver = new ChromeDriver();
     		ChromeOptions options = new ChromeOptions();
     		options.addArguments("headless");
     		options.addArguments("--no-sandbox");
-    		options.addArguments("--whitelisted-ips=");
+    		//options.addArguments("--whitelisted-ips=");
     		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
 	   	driver = new ChromeDriver(service,options);
 
