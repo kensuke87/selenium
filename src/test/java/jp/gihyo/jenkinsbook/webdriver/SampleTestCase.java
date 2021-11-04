@@ -21,7 +21,7 @@ import jp.gihyo.jenkinsbook.page.TopPage;
 public class SampleTestCase {
 
 	private static Properties prop = new Properties();
-	private static WebDriver driver;
+	private static WebDriver driver = new ChromeDriver();
 	
 
 	@BeforeClass
