@@ -33,7 +33,7 @@ public class SampleTestCase {
     		ChromeOptions options = new ChromeOptions();
     		options.addArguments("headless");
     		options.addArguments("--no-sandbox");
-    		//options.addArguments("--whitelisted-ips=");
+    		options.addArguments("--whitelisted-ips=");
     		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
 	   	driver = new ChromeDriver(service,options);
 
