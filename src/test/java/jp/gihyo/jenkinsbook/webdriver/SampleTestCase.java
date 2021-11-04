@@ -12,6 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import jp.gihyo.jenkinsbook.page.ResultPage;
@@ -32,6 +33,7 @@ public class SampleTestCase {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		options.addArguments("--no-sandbox");
+		final ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
 		driver = new ChromeDriver(options);
 
 	}
