@@ -35,7 +35,7 @@ public class SampleTestCase {
     		options.addArguments("--no-sandbox");
     		options.addArguments("--whitelisted-ips=");
     		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
-	   	driver = new ChromeDriver(service,options);
+	   	driver = new ChromeDriver(options);
 
 	}
 
