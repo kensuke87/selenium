@@ -21,7 +21,7 @@
     <junit.version>4.12</junit.version>
     
     <!-- Selenium Properties -->
-    <selenium-java.version>3.4.0</selenium-java.version>
+    <selenium-java.version>3.14.0</selenium-java.version>
     <selenium.baseUrl>http://54.168.58.42:8080</selenium.baseUrl>
   </properties>
   
