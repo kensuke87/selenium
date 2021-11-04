@@ -21,7 +21,7 @@ import jp.gihyo.jenkinsbook.page.TopPage;
 public class SampleTestCase {
 
 	private static Properties prop = new Properties();
-	private static WebDriver driver = new ChromeDriver();
+	private static WebDriver driver;
 	
 
 	@BeforeClass
@@ -29,11 +29,11 @@ public class SampleTestCase {
 		prop.load(new FileInputStream("target/test-classes/selenium.properties"));
     		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
     		System.setProperty("webdriver.chrome.whitelistedIps", "");
-    		//WebDriver driver = new ChromeDriver();
+    		WebDriver driver = new ChromeDriver();
     		ChromeOptions options = new ChromeOptions();
     		options.addArguments("headless");
     		options.addArguments("--no-sandbox");
-    		options.addArguments("--whitelisted-ips=");
+    		//options.addArguments("--whitelisted-ips=");
     		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
 	   	driver = new ChromeDriver(options);
 
