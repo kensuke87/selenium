@@ -33,6 +33,7 @@ public class SampleTestCase {
     		ChromeOptions options = new ChromeOptions();
     		options.addArguments("--headless");
     		options.addArguments("--no-sandbox");
+		options.addArguments("--remote-debugging-port=9222");
     		//options.addArguments("--whitelisted-ips=");
     		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
 	   	driver = new ChromeDriver(options);
