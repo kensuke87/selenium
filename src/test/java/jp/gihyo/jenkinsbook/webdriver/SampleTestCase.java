@@ -34,7 +34,7 @@ public class SampleTestCase {
 		options.addArguments("headless");
 		options.addArguments("--no-sandbox");
 		final ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver(service,options);
 
 	}
 
