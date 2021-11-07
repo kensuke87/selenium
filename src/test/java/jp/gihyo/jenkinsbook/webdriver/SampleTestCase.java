@@ -15,6 +15,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.devicefarm.*;
+import software.amazon.awssdk.services.devicefarm.model.*;
+
 import jp.gihyo.jenkinsbook.page.ResultPage;
 import jp.gihyo.jenkinsbook.page.TopPage;
 
