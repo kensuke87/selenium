@@ -23,8 +23,9 @@
     <!-- Selenium Properties -->
     <selenium-java.version>3.14.0</selenium-java.version>
     <selenium.baseUrl>http://54.168.58.42:8080</selenium.baseUrl>
-    
-    <dependencyManagement>
+  </properties>
+  
+  <dependencyManagement>
       <dependencies>
         <dependency>
           <groupId>software.amazon.awssdk</groupId>
@@ -34,9 +35,7 @@
           <scope>import</scope>
         </dependency>
       </dependencies>
-    </dependencyManagement>
-    
-  </properties>
+  </dependencyManagement>
   
   <dependencies>
     <dependency>
