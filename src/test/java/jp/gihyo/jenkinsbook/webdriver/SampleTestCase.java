@@ -27,14 +27,18 @@ public class SampleTestCase {
 	@BeforeClass
 	public static void setUpClass() throws IOException {
 		prop.load(new FileInputStream("target/test-classes/selenium.properties"));
-    		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-    		ChromeOptions options = new ChromeOptions();
-    		options.addArguments("headless");
-    		options.addArguments("--no-sandbox");
-		//options.addArguments("--remote-debugging-port=9222");
-    		//options.addArguments("--whitelisted-ips=");
-    		//ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
-	   	driver = new ChromeDriver(options);
+		String myProjectARN = "arn:aws:devicefarm:us-west-2:321383769722:testgrid-project:8520791c-5f97-4345-9349-6acb15414842";
+		DeviceFarmClient client  = DeviceFarmClient.builder().region(Region.US_WEST_2).build();
+		CreateTestGridUrlRequest request = CreateTestGridUrlRequest.builder()
+		.expiresInSeconds(300)
+		.projectArn(myProjectARN)
+		.build();
+		CreateTestGridUrlResponse response = client.createTestGridUrl(request);
+		DesiredCapabilities cap = DesiredCapabilities.edge();
+		cap.setCapability("ms:edgeChromium", "true");
+		URL testGridUrl = new URL(response.url());
+		// You can now pass this URL into RemoteWebDriver.
+		driver = new RemoteWebDriver(testGridUrl, cap);
 
 	}
 
