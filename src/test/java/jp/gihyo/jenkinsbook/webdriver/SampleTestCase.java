@@ -34,7 +34,7 @@ public class SampleTestCase {
 	@BeforeClass
 	public static void setUpClass() throws IOException {
 		prop.load(new FileInputStream("target/test-classes/selenium.properties"));
-		String myProjectARN = "arn:aws:devicefarm:us-west-2:321383769722:testgrid-project:8520791c-5f97-4345-9349-6acb15414842";
+		String myProjectARN = "arn:aws:devicefarm:us-west-2:421850136157:project:d835a0a3-de5c-42d4-9fb5-2ee9442f3f37";
 		DeviceFarmClient client  = DeviceFarmClient.builder().region(Region.US_WEST_2).build();
 		CreateTestGridUrlRequest request = CreateTestGridUrlRequest.builder()
 		.expiresInSeconds(300)
