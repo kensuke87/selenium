@@ -23,6 +23,19 @@
     <!-- Selenium Properties -->
     <selenium-java.version>3.14.0</selenium-java.version>
     <selenium.baseUrl>http://54.168.58.42:8080</selenium.baseUrl>
+    
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>software.amazon.awssdk</groupId>
+          <artifactId>bom</artifactId>
+          <version>2.17.61</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+    
   </properties>
   
   <dependencies>
@@ -38,6 +51,15 @@
       <version>${selenium-java.version}</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>devicefarm</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>regions</artifactId>
+    </dependency>    
   </dependencies>
   
   <build>
