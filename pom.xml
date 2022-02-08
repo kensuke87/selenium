@@ -22,7 +22,7 @@
     
     <!-- Selenium Properties -->
     <selenium-java.version>3.14.0</selenium-java.version>
-    <selenium.baseUrl>http://35.76.214.230:8080</selenium.baseUrl>
+    <selenium.baseUrl>http://13.114.204.235:8080</selenium.baseUrl>
   </properties>
   
   <dependencyManagement>
